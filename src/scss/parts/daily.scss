@@ -1,0 +1,119 @@
+.daily {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: em(20);
+    border-radius: 25px;
+    background-image: url("/src/assets/images/bg.png");
+    background-position: center center;
+    background-size: cover;
+    width: 50%;
+    z-index: 2;
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: em(10);
+      z-index: 2;
+    }
+  
+    &__day {
+      width: 100%;
+      span {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: em(30);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $headerText;
+      }
+    }
+    &__date {
+      width: 100%;
+      span {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: em(20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $headerText;
+      }
+    }
+    &__location {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: em(10);
+      p {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: em(18);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $headerText;
+      }
+    }
+    &__location img {
+      max-width: em(27);
+    }
+    &__weather {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: em(10);
+      padding-bottom: em(20);
+      z-index: 2;
+    }
+    &__img img {
+      max-width: em(60);
+      width: 100%;
+    }
+    &__temp {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      span {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: em(46);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $headerText;
+      }
+    }
+    &__state {
+      width: 100%;
+      span {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: em(28);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $headerText;
+        text-transform: capitalize;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 25px;
+      background: linear-gradient(
+        136deg,
+        rgba(136, 235, 239, 0.7) 0%,
+        rgba(83, 91, 230, 0.7) 100%
+      );
+    }
+    @include mobile {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }

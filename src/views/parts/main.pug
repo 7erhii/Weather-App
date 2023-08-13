@@ -1,0 +1,74 @@
+main.main
+  .daily
+    .daily__header
+      .daily__day
+        span.js-day-name -
+      .daily__date
+        span.js-day-date -
+      .daily__location
+        img(src=require(`../../assets/images/location.png`), alt="")
+        p.js-city-name -
+    .daily__weather
+      .daily__temp
+        span.js-city-temp -
+        .daily__img
+          img.daily__location-img.js-weather-icon(
+            src="https://openweathermap.org/img/wn/10d@2x.png",
+            alt=""
+          )
+      .daily__state
+        span.js-city-weather-status -
+  .info
+    .info__indicators
+      .switcher
+        p Metric/Imperial
+        label.switch
+          input.js-switcher-input(type="checkbox")
+          div
+      .info__indicator
+        p Wind Speed
+        span.js-wind-speed -
+      .info__indicator
+        p Gust
+        span.js-wind-gust -
+      .info__indicator
+        p Wind Direction
+        span.js-wind-direction -
+    .info__days
+      .info__day.info__day--active
+        .info__day-state
+          img(src=require(`../../assets/images/curr-temp.svg`), alt="")
+        .info__day-name
+          p Curr
+        .info__day-temp
+          p.js-city-curr-temp -
+      .info__day
+        .info__day-state
+          img(src=require(`../../assets/images/max-temp.svg`), alt="")
+        .info__day-name
+          p max
+        .info__day-temp
+          p.js-city-max-temp -
+      .info__day
+        .info__day-state
+          img(src=require(`../../assets/images/min-temp.svg`), alt="")
+        .info__day-name
+          p Min
+        .info__day-temp
+          p.js-city-min-temp -
+      .info__day
+        .info__day-state
+          img(src=require(`../../assets/images/feels-temp.svg`), alt="")
+        .info__day-name
+          p Feels like
+        .info__day-temp
+          p.js-city-fells-temp -
+    .info__location-input
+      .city-input
+        input.js-search-input(type="text", placeholder="City for search...")
+        .city-input__error
+          span.js-search-input-error-message Empty field
+    .info__actions
+      button.button-submit.js-search-button
+        img(src=require(`../../assets/images/location.png`), alt="")
+        span Change Location

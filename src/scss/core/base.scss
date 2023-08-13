@@ -1,0 +1,140 @@
+::selection {
+  background: $selectionColor;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include Font400;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  height: 100%;
+  min-height: em(600);
+  color: #333;
+  background: #343d4b;
+}
+
+a {
+  text-decoration: none;
+}
+
+.switcher {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: em(10);
+  p {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: #fff;
+    font-size: em(14);
+  }
+}
+
+.switch {
+  display: inline-block;
+  height: em(30);
+  width: em(60);
+  background: linear-gradient(136deg, #88ebefb3 0%, #535be6b3 100%);
+  border-radius: 1em;
+
+  & input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  & div {
+    height: em(30);
+    width: em(30);
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    transition: all 300ms;
+  }
+
+  & input:checked + div {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.button-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: em(4) 0;
+  margin-top: em(10);
+  gap: em(8);
+  width: 100%;
+  height: em(40);
+  border-radius: 10px;
+  background: linear-gradient(
+    131deg,
+    rgba(144, 217, 224, 0.9) 0%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  span {
+    color: #fff;
+    text-align: right;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: em(14);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  img {
+    width: em(24);
+  }
+
+  &:hover {
+    background: linear-gradient(
+      131deg,
+      rgba(118, 178, 184, 0.9) 0%,
+      rgba(68, 78, 187, 0.9) 100%
+    );
+  }
+}
+
+.city-input {
+  margin-bottom: em(15);
+  position: relative;
+  input {
+    width: 100%;
+    font-size: em(18);
+    height: em(50, 18);
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-weight: 400;
+    padding: em(12, 18);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: em(5);
+    span {
+      color: #ff0000;
+      font-size: em(12);
+      font-weight: 400;
+      display: none;
+    }
+  }
+}
