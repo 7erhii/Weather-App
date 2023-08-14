@@ -17,7 +17,7 @@ Axios
 OpenWeatherAPI
 Accomplishments:
 
-Created pixel-perfect layout based on the Figma design - link to Figma
+Created pixel-perfect layout based on the Figma design
 Integrated 2 requests for obtaining specific data
 Utilized Pug for templating and SCSS for styles
 Implemented and configured TypeScript, covering my code with types.
